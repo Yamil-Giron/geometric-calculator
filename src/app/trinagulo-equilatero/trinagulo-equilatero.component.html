@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-card>
+    <div class="img_container">
+    <ion-img Src="../../assets/images/Triangulo.jpg" class="img-responsive"></ion-img>
+    </div>
+  <ion-item>
+    <ion-input 
+      fill="solid" 
+      label="Lado: " 
+      labelPlacement="floating" 
+      type="number" 
+      [(ngModel)]="lado" >
+    </ion-input>
+    <ion-button expand="block" (click)="calcularPerimetro()">Calcular</ion-button>
+  </ion-item>
+  <ion-item>
+    <p><strong>Perímetro:</strong> {{ perimetro }}</p>
+  </ion-item>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Geometric Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-select [(ngModel)]="seleccionadaFigura" interface="popover">
+      <ion-select-option value="circulo">circulo</ion-select-option>
+      <ion-select-option value="cuadrado">cuadrado</ion-select-option>
+      <ion-select-option value="triangulo-escaleno">triangulo-escaleno</ion-select-option>
+      <ion-select-option value="triangulo-equilatero">triangulo-equilatero</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+<ng-container *ngIf="seleccionadaFigura === 'circulo'">
+  <app-circulo></app-circulo>
+</ng-container>
+<ng-container *ngIf="seleccionadaFigura === 'cuadrado'">
+  <app-cuadrado></app-cuadrado>
+</ng-container>
+<ng-container *ngIf="seleccionadaFigura === 'triangulo-escaleno'">
+  <app-triangulo></app-triangulo>
+</ng-container>
+<ng-container *ngIf="seleccionadaFigura === 'triangulo-equilatero'">
+  <app-triangulo-equilatero></app-triangulo-equilatero>
+</ng-container>
+</ion-content>

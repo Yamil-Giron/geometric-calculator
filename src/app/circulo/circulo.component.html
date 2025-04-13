@@ -1,0 +1,15 @@
+<ion-content>
+  <ion-card>
+    <div class="img_container">
+    <ion-img Src="../../assets/images/Circulo.jpg" class="img-responsive"></ion-img>
+    </div>
+  <ion-item>
+    <ion-input fill="solid" label="Radio: " labelPlacement="floating" type="number" id="radio" [(ngModel)]="radio"> </ion-input>
+    <ion-button (click)="calcularPerimetro()">Calcular</ion-button>
+  </ion-item>
+  <ion-item>
+    <p>Perímetro: {{ perimetro }}</p>
+  </ion-item>
+ </ion-card>
+</ion-content>
+  
